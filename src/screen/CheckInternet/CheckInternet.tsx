@@ -5,9 +5,10 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 const CheckInternet = ({ isConnected, setIsConnected }) => {
     useEffect(() => {
         // Subscribe
+        
         const unsubscribe = NetInfo.addEventListener(state => {
-            console.log("Connection type", state.type);
-            console.log("Is connected?", state.isConnected);
+            // console.log("Connection type", state.type);
+            // console.log("Is connected?", state.isConnected);
             setIsConnected(state.isConnected)
         });
 
